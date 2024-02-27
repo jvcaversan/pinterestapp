@@ -1,9 +1,22 @@
+import Avatar from "@/components/Avatar";
+import { theme } from "@/theme";
 import { Foundation, Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 const TabLayout = () => {
   return (
-    <Tabs screenOptions={{ headerShown: false, tabBarShowLabel: false }}>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: theme.colors.white,
+        tabBarInactiveTintColor: theme.colors.gray[600],
+        tabBarStyle: {
+          backgroundColor: theme.colors.black,
+          borderColor: theme.colors.black,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -31,8 +44,11 @@ const TabLayout = () => {
       <Tabs.Screen
         name="profile"
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Ionicons name="person" size={size} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Avatar
+              selected={color === theme.colors.white}
+              source={{ uri: "https://github.com/jvcaversan.png" }}
+            />
           ),
         }}
       />
