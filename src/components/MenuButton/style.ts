@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     alignItems:"center",
+    // backgroundColor:"red"
   },
   text:{
     color:theme.colors.white,
@@ -13,8 +14,9 @@ export const styles = StyleSheet.create({
   },
   icons: {
     padding:24,
-    backgroundColor: "red",
+    backgroundColor: theme.colors.gray[700],
     borderRadius:22,
     borderWidth:1,
+    overflow:"hidden"
   }
 });
