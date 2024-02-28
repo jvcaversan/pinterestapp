@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import { View, Text } from "react-native";
-import React, { forwardRef } from "react";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { MenuProps } from "./menu";
 import { FontAwesome } from "@expo/vector-icons";
+
+import { MenuProps } from "./menu";
 import { styles } from "./styles";
 import { theme } from "@/theme";
-import MenuButton from "./MenuButton";
+import MenuButton from "../MenuButton";
 
 const Menu = forwardRef<BottomSheet, MenuProps>(({ onClose }, ref) => {
   return (
@@ -20,9 +21,9 @@ const Menu = forwardRef<BottomSheet, MenuProps>(({ onClose }, ref) => {
         <View style={styles.header}>
           <FontAwesome
             name="close"
-            size={28}
-            onPress={onClose}
+            size={24}
             color={theme.colors.white}
+            onPress={onClose}
           />
           <Text style={styles.title}>Comece a criar agora</Text>
         </View>

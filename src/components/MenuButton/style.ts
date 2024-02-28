@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    alignItems:"center"
+    alignItems:"center",
   },
   text:{
     color:theme.colors.white,
@@ -11,9 +11,10 @@ export const styles = StyleSheet.create({
     fontSize:14,
     marginTop:10
   },
-  icon: {
+  icons: {
     padding:24,
-    backgroundColor: theme.colors.gray[700],
-    borderRadius:22
+    backgroundColor: "red",
+    borderRadius:22,
+    borderWidth:1,
   }
 });

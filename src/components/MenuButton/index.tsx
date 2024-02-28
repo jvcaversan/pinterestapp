@@ -1,9 +1,10 @@
-import { View, Text, Pressable } from "react-native";
-import React from "react";
-import { MenuButtonProps } from "./menuButton";
-import { styles } from "./style";
+import { Text, Pressable } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+
+import { styles } from "./style";
 import { theme } from "@/theme";
+
+import { MenuButtonProps } from "./menuButton";
 
 const MenuButton = ({ title, icon }: MenuButtonProps) => {
   return (
@@ -12,7 +13,7 @@ const MenuButton = ({ title, icon }: MenuButtonProps) => {
         name={icon}
         size={32}
         color={theme.colors.white}
-        style={styles.icon}
+        style={styles.icons}
       />
       <Text style={styles.text}>{title}</Text>
     </Pressable>

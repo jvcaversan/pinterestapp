@@ -10,19 +10,18 @@ export const styles = StyleSheet.create({
     padding: 24,
     alignItems:"center"
   },
+  header: {
+    flexDirection:"row"
+  },
   title: {
-    fontFamily: theme.fontFamily.medium,
     fontSize:18,
+    fontFamily: theme.fontFamily.medium,
     color: theme.colors.white,
     flex: 1,
     textAlign:"center",
     marginRight:24,
     marginTop:4
   },
-  header: {
-    flexDirection:"row"
-  },
-
   options: {
     flexDirection:"row",
     gap:16,
