@@ -3,6 +3,7 @@ import { View } from "react-native";
 import Post from "@/components/Post";
 import { PostsProps } from "./posts";
 import { ScrollView } from "react-native-gesture-handler";
+import { styles } from "./styles";
 
 const Posts = ({ posts }: PostsProps) => {
   const postsByColumn = (column: "right" | "left") => {
@@ -14,8 +15,14 @@ const Posts = ({ posts }: PostsProps) => {
   };
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View>{postsByColumn("left")}</View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.list}
+    >
+      <View style={styles.container}>
+        <View style={styles.column}>{postsByColumn("left")}</View>
+        <View style={styles.column}>{postsByColumn("right")}</View>
+      </View>
     </ScrollView>
   );
 };
